@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>eMercado - Todo lo que busques está aquí</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <style>
+    body{
+      background-image: url("img/fondo01.png");
+    }
+    </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <li class="nav-item">
+          </li>
+          <li class="nav-item"><button id="toggle-button"> Modo Noche </button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <nav>
+  <main> 
+
+    <nav class="path" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><a href="categories.html">Categorias</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Producto</li>
+      </ol>
+    </nav>
+
+
+    <div id="productInfo"></div>
+
+
+    
+    <div id="relatedProducts"></div>
+
+
+      <div class="rating" id="ratingID">
+        <div class="contenedorrating">
+
+         <div class="rating1" id="destacadas"><h2>Opiniones destacadas</h2></div>
+          
+        </div>
+
+       <br>
+        <div class="rating-container">
+         <h3 id="opinion"><b>Escribir opinion de este producto</b></h3>
+         <button id="btncalificar" type="submit">Calificar</button>
+         <h2 class="rating1">Productos Relacionados</h2>
+        </div>
+        <br><br>
+
+        <div><h2 id="prodRelacionados"></h2></div>
+      </div>
+
+      <!-- Modal_ Es una ventana emergente que está oculta inicialmente (display: none). Se muestra cuando el usuario hace clic en el botón "Calificar". --> 
+    <div id="calificarModal" class="modal">
+      <div id="bodymodal" class="modal-content">
+          <span id="closemodal" class="close">&times;</span>
+          
+          <!-- Selección de estrellas -->
+          <div class="ratingestrellas">
+              <span class="estrella" data-value="1">★</span>
+              <span class="estrella" data-value="2">★</span>
+              <span class="estrella" data-value="3">★</span>
+              <span class="estrella" data-value="4">★</span>
+              <span class="estrella" data-value="5">★</span>
+          </div>
+
+          <!-- Campo de comentarios -->
+          <textarea id="comentario" rows="8" cols="70" placeholder="Escriba su comentario..."></textarea>
+          
+          <!-- Botón enviar -->
+          <button id="enviarBtn"><b>Enviar</b></button>
+      </div>
+   </div>
+   <div id="toastContainer" class="toast-container"></div>
+   <div id="productosRelacionados"></div>
+
+  </main>
+  
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a></p>
+    </div>
+  </footer>
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+   
+ <!-- Carga de jQuery y Bootstrap desde CDN (si no quieres usar tu archivo local) -->
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+
+ <!-- Carga de scripts personalizados -->
+ <script src="js/init.js" defer></script>
+ <script src="js/products.js" defer></script>
+ <script src="js/product-info.js" defer></script>
+ <script src="js/cart.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+ 
+ </body>
+
+
+</html>
+
+
+
